@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: biswaazuredevopgithubacraksapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: biswaazuredevopgithubacraksapp
+  template:
+    metadata:
+      labels:
+        app: biswaazuredevopgithubacraksapp 
+    spec:
+      containers:
+        - name: biswaazuredevopgithubacraksapp 
+          image: demoaksdevopsacr.azurecr.io/biswaazuredevopgithubacraksapp
+          ports:
+          - containerPort: 80
